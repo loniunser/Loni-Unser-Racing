@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loni Unser Racing</title>
+<meta name="description" content="Official home of Loni Unser Racing: follow the season, meet the driver, partner with the team, and shop merch.">
+<meta property="og:title" content="Loni Unser Racing">
+<meta property="og:description" content="Follow the season, meet the driver, partner with the team, and shop merch.">
+<meta name="theme-color" content="#0b0b0d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,800;1,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <a class="logo" href="#top">LONI <b>UNSER</b></a>
+  <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  <nav>
+    <a href="#about">Driver</a>
+    <a href="#season">Season</a>
+    <a href="#results">Results</a>
+    <a href="#partners">Partners</a>
+    <a href="#shop">Shop</a>
+    <a href="#contact" class="btn btn-sm">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="Replace with a hero photo of Loni in the car"></div>
+  <div class="wrap">
+    <p class="eyebrow">Racing · Season <span data-year>2026</span></p>
+    <h1>Built to <em>race.</em><br>Born to <em>win.</em></h1>
+    <p class="lead">Follow Loni Unser's journey from the grid to the podium. Race updates, behind the scenes, and official merch.</p>
+    <div class="cta">
+      <a href="#season" class="btn">Next race</a>
+      <a href="#shop" class="btn btn-ghost">Shop merch</a>
+    </div>
+  </div>
+  <div class="stats wrap">
+    <div><strong>00</strong><span>Wins</span></div>
+    <div><strong>00</strong><span>Podiums</span></div>
+    <div><strong>00</strong><span>Poles</span></div>
+    <div><strong>00</strong><span>Starts</span></div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div><span>LONI UNSER RACING</span><span>FOLLOW THE SEASON</span><span>OFFICIAL MERCH COMING SOON</span><span>LONI UNSER RACING</span><span>FOLLOW THE SEASON</span><span>OFFICIAL MERCH COMING SOON</span></div></div>
+
+<section id="about" class="section">
+  <div class="wrap two">
+    <div class="photo" role="img" aria-label="Replace with a portrait of Loni"></div>
+    <div>
+      <p class="eyebrow">The driver</p>
+      <h2>Meet Loni</h2>
+      <p>[Add your story here: where you grew up, how you got into racing, the series you compete in, and what drives you.]</p>
+      <p>[Add a second paragraph: your goals, your team, and what fans can expect this season.]</p>
+      <ul class="facts">
+        <li><span>Hometown</span>[City, State]</li>
+        <li><span>Series</span>[Series name]</li>
+        <li><span>Car</span>[Car number / class]</li>
+        <li><span>Team</span>[Team name]</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="season" class="section dark">
+  <div class="wrap">
+    <p class="eyebrow">Schedule</p>
+    <h2>The season</h2>
+    <div class="next" id="next-race" hidden>
+      <span>Next race in</span>
+      <div class="count"><b data-d>0</b>d <b data-h>0</b>h <b data-m>0</b>m <b data-s>0</b>s</div>
+      <p data-name></p>
+    </div>
+    <ol class="races" id="races"></ol>
+  </div>
+</section>
+
+<section id="results" class="section">
+  <div class="wrap">
+    <p class="eyebrow">Race results</p>
+    <h2>Recent finishes</h2>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Date</th><th>Event</th><th>Track</th><th>Start</th><th>Finish</th></tr></thead>
+        <tbody>
+          <tr><td>[Date]</td><td>[Event]</td><td>[Track]</td><td>—</td><td class="fin">—</td></tr>
+          <tr><td>[Date]</td><td>[Event]</td><td>[Track]</td><td>—</td><td class="fin">—</td></tr>
+          <tr><td>[Date]</td><td>[Event]</td><td>[Track]</td><td>—</td><td class="fin">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="wrap">
+    <p class="eyebrow">Gallery</p>
+    <h2>On track</h2>
+    <div class="gallery">
+      <div class="g1"></div><div class="g2"></div><div class="g3"></div><div class="g4"></div><div class="g5"></div>
+    </div>
+    <p class="note">Drop your photos into <code>assets/</code> and swap them in via <code>styles.css</code>.</p>
+  </div>
+</section>
+
+<section id="partners" class="section">
+  <div class="wrap center">
+    <p class="eyebrow">Partners</p>
+    <h2>Powered by</h2>
+    <div class="logos">
+      <div>Sponsor</div><div>Sponsor</div><div>Sponsor</div><div>Sponsor</div>
+    </div>
+    <p>Interested in partnering with Loni Unser Racing? Reach brand-aligned fans and share the journey.</p>
+    <a href="#contact" class="btn">Become a partner</a>
+  </div>
+</section>
+
+<section id="shop" class="section dark">
+  <div class="wrap">
+    <p class="eyebrow">Official merch</p>
+    <h2>The shop <small>Dropping soon</small></h2>
+    <div class="products">
+      <article class="product"><div class="pimg">TEE</div><h3>Team Tee</h3><p>$00</p><span class="tag">Coming soon</span></article>
+      <article class="product"><div class="pimg">HAT</div><h3>Team Hat</h3><p>$00</p><span class="tag">Coming soon</span></article>
+      <article class="product"><div class="pimg">HOOD</div><h3>Pit Crew Hoodie</h3><p>$00</p><span class="tag">Coming soon</span></article>
+      <article class="product"><div class="pimg">DECAL</div><h3>Decal Pack</h3><p>$00</p><span class="tag">Coming soon</span></article>
+    </div>
+    <form class="signup" id="signup">
+      <label for="email">Get notified when the shop opens</label>
+      <div>
+        <input id="email" name="email" type="email" placeholder="you@email.com" required>
+        <button class="btn" type="submit">Notify me</button>
+      </div>
+      <p class="msg" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h2>Let's talk</h2>
+      <p>Sponsorship, media, appearances, or just to say hi.</p>
+      <p><a href="mailto:hello@example.com">hello@example.com</a></p>
+      <div class="social">
+        <a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a><a href="#">YouTube</a>
+      </div>
+    </div>
+    <form class="contact" id="contact-form" action="mailto:hello@example.com" method="post" enctype="text/plain">
+      <input name="name" placeholder="Name" required>
+      <input name="email" type="email" placeholder="Email" required>
+      <textarea name="message" rows="5" placeholder="Message" required></textarea>
+      <button class="btn" type="submit">Send</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>© <span data-year>2026</span> Loni Unser Racing. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
