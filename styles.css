@@ -92,3 +92,19 @@ input,textarea{font:inherit;padding:1rem;border:2px solid #000;background:#fff;w
  .row{flex-direction:column}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* gallery */
+.gallery-sec{padding:40px 4vw 80px}
+.gallery-sec h2{font-size:clamp(2rem,4vw,3.4rem);margin-bottom:2rem}
+.gallery{columns:3;column-gap:14px}
+.gi{display:block;width:100%;margin:0 0 14px;padding:0;border:0;background:#ddd;cursor:zoom-in;break-inside:avoid}
+.gi img{transition:filter .4s,transform .4s}
+.gi:hover img,.gi:focus-visible img{filter:none;transform:scale(1.02)}
+.gi{overflow:hidden}
+.lightbox{position:fixed;inset:0;z-index:20;background:rgba(0,0,0,.94);display:grid;place-items:center;padding:4vw;cursor:zoom-out}
+.lightbox[hidden]{display:none}
+.lightbox img{max-width:100%;max-height:92vh;object-fit:contain;filter:none}
+.lightbox button{position:absolute;top:14px;right:22px;background:0;border:0;color:#fff;font-size:2.6rem;cursor:pointer;line-height:1}
+/* page with photo */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:start;max-width:none}
+.split .photo{position:sticky;top:30px}
+@media(max-width:820px){.gallery{columns:2;column-gap:10px}.gi{margin-bottom:10px}.split{grid-template-columns:1fr}.split .photo{position:static}}

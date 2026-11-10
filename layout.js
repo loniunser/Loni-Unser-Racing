@@ -35,7 +35,7 @@ document.body.insertAdjacentHTML("beforeend",
    <p class="legal">© ${new Date().getFullYear()} Loni Unser. All rights reserved.</p></footer>`);
 
 // Missing image → neat grey placeholder (so the site looks intentional before photos are added)
-document.querySelectorAll("img").forEach(img => {
+document.querySelectorAll("img:not(.lightbox img)").forEach(img => {
   const swap = () => { const d = document.createElement("div"); d.className = "ph " + img.className.replace("photo",""); d.textContent = img.dataset.name || ("Add photo: " + (img.getAttribute("src")||"")); img.replaceWith(d); };
   img.addEventListener("error", swap); if (img.complete && !img.naturalWidth) swap();
 });
@@ -43,3 +43,12 @@ const b = document.querySelector(".burger"), n = document.querySelector(".site-h
 b.addEventListener("click", () => b.setAttribute("aria-expanded", n.classList.toggle("open")));
 const io = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && (e.target.classList.add("in"), io.unobserve(e.target))), {threshold:.1});
 document.querySelectorAll("main > *:not(.hero)").forEach(el => { el.classList.add("reveal"); io.observe(el); });
+
+// Gallery lightbox
+const lb = document.querySelector(".lightbox");
+if (lb) {
+  const big = lb.querySelector("img");
+  document.querySelectorAll(".gi").forEach(b => b.addEventListener("click", () => { big.src = b.dataset.full; big.alt = b.querySelector("img").alt; lb.hidden = false; }));
+  lb.addEventListener("click", () => { lb.hidden = true; big.removeAttribute("src"); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape") lb.click(); });
+}
