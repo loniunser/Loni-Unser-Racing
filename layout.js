@@ -13,7 +13,7 @@ const SITE = {
     { name: "Kellymoss", file: "kellymoss.png" },
   ],
 };
-const PAGES = [["Home","index.html"],["2026","2026.html"],["About","about.html"],["Contact","contact.html"],["Schedule","schedule.html"],["Shop","shop.html"],["Cart","cart.html"]];
+const PAGES = [["Home","index.html"],["2027","2027.html"],["About","about.html"],["Contact","contact.html"],["Schedule","schedule.html"],["Shop","shop.html"],["Cart","cart.html"]];
 const here = location.pathname.split("/").pop() || "index.html";
 const icons = {
   Instagram:'<path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 8.2a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zM17.3 5.5a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4zM12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.200-1.7 4.800-4.900 4.900-1.300.1-1.600.1-4.800.1s-3.600 0-4.800-.1c-3.300-.1-4.800-1.700-4.900-4.900C2.200 15.600 2.200 15.200 2.200 12s0-3.600.1-4.800C2.400 3.900 4 2.400 7.200 2.300 8.400 2.200 8.800 2.200 12 2.200zM12 0C8.700 0 8.300 0 7.100.1 2.700.3.300 2.700.1 7.100 0 8.300 0 8.700 0 12s0 3.700.1 4.900c.2 4.400 2.600 6.800 7 7 1.200.1 1.600.1 4.900.1s3.700 0 4.900-.1c4.400-.2 6.800-2.600 7-7 .1-1.200.1-1.600.1-4.900s0-3.700-.1-4.900c-.2-4.400-2.600-6.800-7-7C15.700 0 15.300 0 12 0z"/>',

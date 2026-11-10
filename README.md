@@ -6,7 +6,7 @@ Static multi-page site (no build). Preview: `python3 -m http.server` then open h
 **Shared header/footer/sponsors/socials/email**: `layout.js` (top of file).
 
 **Photos**: drop into `assets/`. They are shown black & white automatically.
-`home.jpg`, `about.jpg`, `schedule-hero.jpg`, `2026-hero.jpg`.
+`home.jpg`, `about.jpg`, `schedule-hero.jpg`, `2027-hero.jpg`.
 **Sponsor logos**: `assets/sponsors/` (names listed in `layout.js`).
 Missing images show a grey placeholder.
 
