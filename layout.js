@@ -1,8 +1,11 @@
 // Shared header/footer, edit once, applies to every page.
 const SITE = {
   email: "loniunser@gmail.com",
-  social: { // replace # with your real profile URLs
-    Instagram: "#", LinkedIn: "#", YouTube: "#", TikTok: "#"
+  social: { 
+    Instagram: "https://www.instagram.com/loniunser",
+    LinkedIn: "https://www.linkedin.com/in/loni-unser-095999b3",
+    YouTube: "https://www.youtube.com/@loniunser",
+    TikTok: "https://www.tiktok.com/@loniunser"
   },
   // Put logo files in assets/sponsors/ and list them here.
   sponsors: [
