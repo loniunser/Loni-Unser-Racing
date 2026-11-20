@@ -350,3 +350,15 @@ input,textarea{font:inherit;padding:1rem;border:2px solid #000;background:#fff;w
 .sb-text h2{font-size:clamp(2rem,4.4vw,4rem)}
 .sb-text{padding-bottom:6vh}
 @media(max-width:820px){.speak-band{min-height:80svh}.speak-band .photo{object-position:40% 0%}}
+/* speaking: credential tiles adapt to width, never break words */
+.sp-cred ul{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:2.2rem 2rem}
+.sp-cred b{font-size:clamp(1.1rem,1.5vw,1.4rem);overflow-wrap:normal;word-break:normal;hyphens:none;letter-spacing:.01em}
+/* speaking tiles: 4 across, then 2x2, then 1 */
+.sp-cred ul{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:900px){.sp-cred ul{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.sp-cred ul{grid-template-columns:1fr}}
+/* header: keep logo on one line; tighten menu on mid-size screens */
+.logo{white-space:nowrap}
+.site-header nav{gap:clamp(1rem,2vw,2.2rem)}
+@media(max-width:1180px){.site-header{padding-left:3vw;padding-right:3vw}.site-header nav a:not(.btn){font-size:1rem}.logo{font-size:1.6rem}}
+@media(min-width:901px){.sp-cred b{min-height:2.35em}}
