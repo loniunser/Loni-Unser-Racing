@@ -1,6 +1,36 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Loni Unser Racing — Loni Unser</title><meta name="description" content="Loni Unser: professional sports car racing driver. Schedule, story, partners and official merch."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head><body><main>
-<div class="marquee" aria-label="Loni Unser Racing"><div><span>Loni Unser Racing</span><span>Loni Unser Racing</span><span>Loni Unser Racing</span><span>Loni Unser Racing</span></div></div>
-<section class="home"><p>Welcome! I am so glad you are here!</p><img class="photo frame" src="assets/home.jpg" alt="Loni celebrating a win on the podium"></section>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Loni Unser Racing — Loni Unser</title><meta name="description" content="Loni Unser: professional sports car racing driver. Schedule, story, partners and official merch."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head><body class="on-photo"><main>
+<section class="hero home-hero">
+<img class="photo" src="assets/g09.jpg" alt="Loni's number 24 Porsche crossing the yard of bricks at Indianapolis Motor Speedway">
+<div class="hh-inner">
+<p class="kicker">Professional sports car racing driver</p>
+<h1>Loni Unser</h1>
+<p class="welcome">Welcome! I am so glad you are here!</p>
+<div class="cta-row"><a class="cta" href="about.html">Meet Loni</a><a class="cta ghost" href="schedule.html">2027 schedule</a></div>
+</div>
+<div class="marquee" aria-hidden="true"><div><span>Loni Unser Racing</span><span>Loni Unser Racing</span><span>Loni Unser Racing</span><span>Loni Unser Racing</span></div></div>
+</section>
+
+<section class="highlights">
+<h2 class="kicker">Career highlights</h2>
+<ul>
+<li><b>7</b><span>Podiums in the 2024 Porsche Sprint Challenge</span></li>
+<li><b>P2</b><span>Vice-champion, 2025 Porsche Sprint Challenge</span></li>
+<li><b>P3</b><span>In class at Pikes Peak 2025, fastest Porsche on the hill</span></li>
+<li><b>2022</b><span>National champion, World Racing League, Porsche Cayman</span></li>
+</ul>
+</section>
+
+<section class="meet">
+<img class="photo frame" src="assets/g06.jpg" alt="Loni smiling in the pits at Indianapolis">
+<div>
+<p class="kicker">The driver</p>
+<h2 class="big">Skill, heritage and advocacy.</h2>
+<p>Loni started racing cars in 2017 after a background in ski racing. She carries the Unser name to a new generation of fans, and she is committed to promoting women in motorsports.</p>
+<p>In 2021 she became the first woman to finish in the top 10 in back-to-back races in the Mazda MX-5 Cup.</p>
+<a class="cta" href="about.html">Read her story</a>
+</div>
+</section>
+
 <section class="gallery-sec"><h2 class="big">Gallery</h2><div class="gallery">
 <button class="gi" data-full="assets/g04.jpg"><img class="photo" src="assets/g04.jpg" alt="Loni on the top step of the podium at Watkins Glen with the trophy" loading="lazy"></button>
 <button class="gi" data-full="assets/g11.jpg"><img class="photo" src="assets/g11.jpg" alt="Overhead view of the car at speed" loading="lazy"></button>
@@ -15,5 +45,17 @@
 <button class="gi" data-full="assets/g02.jpg"><img class="photo" src="assets/g02.jpg" alt="Walking the track" loading="lazy"></button>
 </div></section>
 <div class="lightbox" hidden><button aria-label="Close">×</button><img alt=""></div>
+
+<section class="next-band">
+<div><p class="kicker">Next season</p><h2 class="big">2027</h2></div>
+<div><p class="tbd-big">TBD</p><a class="cta alt-light" href="schedule.html">View schedule</a></div>
+</section>
+
+<section class="merch-band">
+<div><p class="kicker">Official merch</p><h2 class="big">Coming soon.</h2><p>Be the first to know when the shop opens.</p></div>
+<form class="row" id="signup-home"><input id="email-home" type="email" placeholder="Your email" aria-label="Email" required><button class="cta alt-light" type="submit">Notify me</button></form>
+<p class="msg" role="status" id="msg-home"></p>
+</section>
 </main>
+<script>document.getElementById("signup-home").addEventListener("submit",function(e){e.preventDefault();document.getElementById("msg-home").textContent="Thank you! You're on the list.";e.target.reset()});</script>
 <script src="layout.js"></script></body></html>
