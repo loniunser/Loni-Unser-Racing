@@ -1,0 +1,79 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Speaking — Loni Unser</title><meta name="description" content="Loni Unser: sports car racing driver. Schedule, story, partners and official merch."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head><body class="on-photo"><main>
+<section class="hero sp-hero">
+<img class="photo" src="assets/speaking-panel.jpg" alt="Loni on stage during the Acumatica Women in Tech Luncheon panel">
+<div class="sp-hero-text"><p class="kicker">Keynotes · Panels · Hosting · Commentary</p><h1>Speaking.</h1></div>
+</section>
+
+<section class="sp-intro">
+<p class="sp-lead">Racing driver, broadcast commentator and event host. Loni brings a driver's perspective and a live-microphone ease to every stage.</p>
+<a class="cta" href="#book">Book Loni</a>
+</section>
+
+<section class="sp-cred">
+<ul>
+<li><span>2023</span><b>Commentator</b><i>Porsche Sprint Challenge</i></li>
+<li><span>2026</span><b>Commentator</b><i>Pikes Peak International Hill Climb</i></li>
+<li><span>Host</span><b>Women With Drive V</b><i>Driven by Mobil 1 Summit</i></li>
+<li><span>Keynote</span><b>Panels &amp; keynotes</b><i>Acumatica, Diverge Innovation Center</i></li>
+</ul>
+</section>
+
+<section class="sp-where">
+<p class="kicker">Where Loni has spoken</p>
+<ul>
+<li><h2>Acumatica Women in Tech Luncheon</h2><p>Keynote panel.</p></li>
+<li><h2>Diverge Innovation Center Grand Opening</h2><p>Keynote, alongside Victoria Thomas of Kellymoss.</p></li>
+<li><h2>Women With Drive V, Driven by Mobil 1</h2><p>Host of the Summit. It is part of an on-air broadcast on the RACER Network this March, with three one-hour episodes of the Summit's most inspiring moments and conversations.</p></li>
+<li><h2>Pikes Peak International Hill Climb, 2026</h2><p>Commentator for the live broadcast.</p></li>
+<li><h2>Porsche Sprint Challenge, 2023 season</h2><p>Commentator.</p></li>
+</ul>
+</section>
+
+<figure class="sp-photo"><img class="photo" src="assets/speaking-panel.jpg" alt="Loni smiling on stage during the Acumatica Women in Tech Luncheon keynote panel" loading="lazy"><figcaption>Acumatica Women in Tech Luncheon</figcaption></figure>
+
+<section class="sp-topics">
+<p class="kicker">What Loni speaks about</p>
+<div>
+<article><h3>Women in motorsports</h3><p>Why representation matters in racing, and what it takes to open doors for the next generation.</p></article>
+<article><h3>Legacy and the Unser name</h3><p>Carrying a famous racing name into a new generation while building a career of her own.</p></article>
+<article><h3>Finding the line</h3><p>What ski racing and sports car racing have in common, and what both teach about preparation and performance.</p></article>
+</div>
+</section>
+
+<section class="sp-watch">
+<p class="kicker">Watch</p>
+<ul>
+<li><a href="https://www.youtube.com/live/7Zx3SHXzJyM" target="_blank" rel="noopener"><span class="r-t">Pikes Peak Hill Climb 2026 broadcast</span><span class="r-go">YouTube →</span></a></li>
+<li><a href="https://next.frame.io/share/7700c0bc-a790-4b05-9a13-084a66e58479/view/1ddc5d5b-de66-40b3-9145-a63d8455a6e7" target="_blank" rel="noopener"><span class="r-t">More video</span><span class="r-go">Watch →</span></a></li>
+</ul>
+</section>
+
+<section class="sp-book" id="book">
+<div class="sp-book-head"><p class="kicker">Booking</p><h2>Book Loni for your event.</h2><p>Keynote, panel, host or live commentary. Tell me about your event and I'll get back to you.</p></div>
+<form class="sp-form" id="book-form" novalidate>
+<div class="f"><label for="b-name">Name</label><input id="b-name" name="name" autocomplete="name" required></div>
+<div class="f"><label for="b-email">Your email</label><input id="b-email" name="email" type="email" autocomplete="email" required></div>
+<div class="f"><label for="b-org">Organisation</label><input id="b-org" name="organisation" autocomplete="organization"></div>
+<div class="f"><label for="b-event">Event name</label><input id="b-event" name="event"></div>
+<div class="f"><label for="b-date">Event date</label><input id="b-date" name="date" placeholder="e.g. March 2027"></div>
+<div class="f"><label for="b-loc">Location</label><input id="b-loc" name="location" placeholder="City, or virtual"></div>
+<div class="f"><label for="b-size">Audience size</label><input id="b-size" name="audience" placeholder="Approximate"></div>
+<div class="f"><label for="b-format">Format</label><select id="b-format" name="format"><option>Keynote</option><option>Panel</option><option>Host or emcee</option><option>Live commentary</option><option>Not sure yet</option></select></div>
+<div class="f full"><label for="b-msg">About your event</label><textarea id="b-msg" name="message" rows="5" required></textarea></div>
+<div class="full"><button class="cta alt-light" type="submit">Send request</button><p class="msg" role="status"></p></div>
+</form>
+</section>
+</main>
+<script src="layout.js"></script>
+<script>
+document.getElementById("book-form").addEventListener("submit",function(e){
+ e.preventDefault();
+ var f=e.target,st=f.querySelector(".msg");
+ if(!f.name.value.trim()||!f.email.value.trim()||!f.message.value.trim()){st.textContent="Please fill in your name, email and a few words about your event.";return}
+ if(!SITE.formEndpoint){st.innerHTML="Booking requests are not switched on yet. For now, send me a message on <a href=\""+SITE.social.Instagram+"\" target=\"_blank\" rel=\"noopener\">Instagram</a>.";return}
+ var data=new FormData(f);data.append("topic","Speaking request");st.textContent="Sending...";
+ fetch(SITE.formEndpoint,{method:"POST",body:data,headers:{Accept:"application/json"}}).then(function(r){
+  if(r.ok){f.reset();st.textContent="Thank you! Your request is on its way."}else{st.textContent="Something went wrong. Please try again, or message me on Instagram."}
+ }).catch(function(){st.textContent="Something went wrong. Please try again, or message me on Instagram."});
+});
+</script></body></html>
