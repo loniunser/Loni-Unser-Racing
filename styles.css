@@ -259,3 +259,22 @@ input,textarea{font:inherit;padding:1rem;border:2px solid #000;background:#fff;w
 .ct2-social a{font:900 clamp(1.2rem,2.4vw,1.9rem) "Archivo",Impact,sans-serif;font-stretch:118%;text-transform:uppercase;text-decoration:none;border-bottom:4px solid #000}
 .ct2-social a:hover{background:#000;color:#fff}
 @media(max-width:820px){.ct2-hero{height:60svh}.ct2-email{padding-top:60px}.r-go{display:none}.ct2-rows a{padding:1.3rem .2rem}}
+/* contact page, v4: expanding topic rows */
+.ct2-intro{padding:80px 4vw 10px}
+.ct2-lead{font-size:clamp(1.2rem,2vw,1.6rem);line-height:1.5;max-width:30em;margin:0}
+.ct2-rows{padding-top:30px}
+.ct2-rows details{border-top:2px solid #000}
+.ct2-rows li:last-child details{border-bottom:2px solid #000}
+.ct2-rows ul{border-bottom:0}
+.ct2-rows summary{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.8rem .4rem;cursor:pointer;list-style:none;transition:background .2s,color .2s,padding .2s}
+.ct2-rows summary::-webkit-details-marker{display:none}
+.ct2-rows summary:hover,.ct2-rows summary:focus-visible{background:#000;color:#fff;padding-left:1.6rem;padding-right:1.6rem;outline:none}
+.ct2-rows details[open] summary{background:#000;color:#fff;padding-left:1.6rem;padding-right:1.6rem}
+.ct2-rows .r-go::before{content:"+";font:900 2rem/1 "Archivo",sans-serif}
+.ct2-rows details[open] .r-go::before{content:"\2212"}
+.ct2-form{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;padding:2rem 1.6rem 2.6rem}
+.ct2-form .full{grid-column:1/-1}
+.ct2-form label{display:block;font:700 .8rem "Space Grotesk";letter-spacing:.16em;text-transform:uppercase;margin-bottom:.5rem}
+.ct2-form input:focus-visible,.ct2-form textarea:focus-visible,.ct2-form .cta:focus-visible{outline:3px solid #000;outline-offset:3px}
+.ct2-form .msg a{border-bottom:2px solid #000;font-weight:700}
+@media(max-width:820px){.ct2-form{grid-template-columns:1fr;padding:1.6rem .2rem 2rem}.ct2-intro{padding-top:60px}.ct2-rows .r-go{display:block}}

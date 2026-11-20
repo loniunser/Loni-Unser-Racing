@@ -1,6 +1,7 @@
 // Shared header/footer, edit once, applies to every page.
 const SITE = {
-  email: "loniunser@gmail.com",
+  // Paste your form service address here (e.g. a Formspree or Web3Forms endpoint) to switch on the contact form.
+  formEndpoint: "",
   social: { 
     Instagram: "https://www.instagram.com/loniunser",
     LinkedIn: "https://www.linkedin.com/in/loni-unser-095999b3",
@@ -35,7 +36,7 @@ document.body.insertAdjacentHTML("beforeend",
   `<footer class="site-footer">
    <div class="sponsors">${sp}</div>
    <div class="foot"><div class="big">Loni Unser</div><div class="social">${soc}</div>
-   <a class="big" href="mailto:${SITE.email}">${SITE.email}</a></div>
+   <a class="big" href="contact.html">Say hello &rarr;</a></div>
    <p class="legal">© ${new Date().getFullYear()} Loni Unser. All rights reserved.</p></footer>`);
 
 // Missing image → neat grey placeholder (so the site looks intentional before photos are added)

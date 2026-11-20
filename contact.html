@@ -1,37 +1,47 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact — Loni Unser</title><meta name="description" content="Loni Unser: sports car racing driver. Schedule, story, partners and official merch."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head><body class="on-photo"><main>
 <section class="hero ct2-hero">
 <img class="photo" src="assets/contact.jpg" alt="Loni smiling in the pits with her earpiece in">
-<h1>Let's talk.</h1>
+<h1>Say hello.</h1>
 </section>
 
-<section class="ct2-email">
-<p class="kicker">Email</p>
-<a id="ct-addr" class="ct2-addr" href="mailto:loniunser@gmail.com">loniunser@gmail.com</a>
-<div class="ct2-copy"><button type="button" class="copy" id="copy-email">Copy address</button><span class="msg" id="copy-msg" role="status"></span></div>
+<section class="ct2-intro">
+<p class="ct2-lead">Sponsorship, media, appearances, or just to say hi. Pick what it's about and send me a message.</p>
 </section>
 
 <section class="ct2-rows">
-<p class="kicker">What's it about?</p>
-<ul>
-<li><a href="mailto:loniunser@gmail.com?subject=Sponsorship%20or%20partnership"><span class="r-t">Sponsorship &amp; partnerships</span><span class="r-go">Email →</span></a></li>
-<li><a href="mailto:loniunser@gmail.com?subject=Media%20or%20press"><span class="r-t">Media &amp; press</span><span class="r-go">Email →</span></a></li>
-<li><a href="mailto:loniunser@gmail.com?subject=Appearance%20or%20event"><span class="r-t">Appearances &amp; events</span><span class="r-go">Email →</span></a></li>
-<li><a href="mailto:loniunser@gmail.com?subject=Hi%20Loni"><span class="r-t">Just saying hi</span><span class="r-go">Email →</span></a></li>
-</ul>
+<ul id="ct-topics"></ul>
 </section>
 
 <section class="ct2-social">
-<p class="kicker">Follow along</p>
+<p class="kicker">Or find me here</p>
 <ul id="ct-links"></ul>
 </section>
 </main>
 <script src="layout.js"></script>
 <script>
+var TOPICS=["Sponsorship & partnerships","Media & press","Appearances & events","Just saying hi"];
+var list=document.getElementById("ct-topics");
+TOPICS.forEach(function(t,i){
+ var li=document.createElement("li"),d=document.createElement("details");
+ d.innerHTML='<summary><span class="r-t"></span><span class="r-go" aria-hidden="true"></span></summary>'+
+ '<form class="ct2-form" novalidate><div class="f"><label for="f'+i+'-name">Name</label><input id="f'+i+'-name" name="name" autocomplete="name" required></div>'+
+ '<div class="f"><label for="f'+i+'-email">Your email</label><input id="f'+i+'-email" name="email" type="email" autocomplete="email" required></div>'+
+ '<div class="f full"><label for="f'+i+'-msg">Message</label><textarea id="f'+i+'-msg" name="message" rows="5" required></textarea></div>'+
+ '<div class="full"><button class="cta" type="submit">Send message</button><p class="msg" role="status"></p></div></form>';
+ d.querySelector(".r-t").textContent=t;
+ d.addEventListener("toggle",function(){ if(d.open){list.querySelectorAll("details").forEach(function(o){if(o!==d)o.open=false})} });
+ d.querySelector("form").addEventListener("submit",function(e){
+  e.preventDefault();
+  var f=e.target,st=f.querySelector(".msg");
+  if(!f.name.value.trim()||!f.email.value.trim()||!f.message.value.trim()){st.textContent="Please fill in your name, email and message.";return}
+  if(!SITE.formEndpoint){st.innerHTML="Messages are not switched on yet. For now, send me a message on <a href=\""+SITE.social.Instagram+"\" target=\"_blank\" rel=\"noopener\">Instagram</a>.";return}
+  var data=new FormData(f);data.append("topic",t);st.textContent="Sending...";
+  fetch(SITE.formEndpoint,{method:"POST",body:data,headers:{Accept:"application/json"}}).then(function(r){
+   if(r.ok){f.reset();st.textContent="Thank you! Your message is on its way."}else{st.textContent="Something went wrong. Please try again, or message me on Instagram."}
+  }).catch(function(){st.textContent="Something went wrong. Please try again, or message me on Instagram."});
+ });
+ li.appendChild(d);list.appendChild(li);
+});
 var links=document.getElementById("ct-links");
 Object.keys(SITE.social).forEach(function(n){var li=document.createElement("li");var a=document.createElement("a");a.href=SITE.social[n];a.target="_blank";a.rel="noopener";a.textContent=n;li.appendChild(a);links.appendChild(li)});
-document.getElementById("copy-email").addEventListener("click",function(){
- var m=document.getElementById("copy-msg"),addr=SITE.email;
- var done=function(){m.textContent="Copied."}, fail=function(){var r=document.createRange();r.selectNodeContents(document.getElementById("ct-addr"));var s=getSelection();s.removeAllRanges();s.addRange(r);m.textContent="Selected. Press and hold to copy."};
- try{navigator.clipboard.writeText(addr).then(done,fail)}catch(e){fail()}
-});
 </script></body></html>
