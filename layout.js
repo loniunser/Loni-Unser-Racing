@@ -10,7 +10,7 @@ const SITE = {
   // Put logo files in assets/sponsors/ and list them here.
   sponsors: [
     { name: "Speedway Motors", file: "speedway-motors.png" },
-    { name: "Mobil 1", file: "mobil-1.png" },
+    { name: "Shift Up Now", file: "shift-up-now.png" },
     { name: "Acumatica", file: "acumatica.png" },
     { name: "PenFed Credit Union", file: "penfed.png" },
     { name: "Kellymoss", file: "kellymoss.png" },
