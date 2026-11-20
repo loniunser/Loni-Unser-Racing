@@ -36,7 +36,7 @@ document.body.insertAdjacentHTML("beforeend",
   `<footer class="site-footer">
    <div class="sponsors">${sp}</div>
    <div class="foot"><div class="big">Loni Unser</div><div class="social">${soc}</div>
-   <a class="big" href="contact.html">Say hello &rarr;</a></div>
+   <a class="big" href="contact.html">Get in contact &rarr;</a></div>
    <p class="legal">© ${new Date().getFullYear()} Loni Unser. All rights reserved.</p></footer>`);
 
 // Missing image → neat grey placeholder (so the site looks intentional before photos are added)
