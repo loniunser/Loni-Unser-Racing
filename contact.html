@@ -1,33 +1,28 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact — Loni Unser</title><meta name="description" content="Loni Unser: sports car racing driver. Schedule, story, partners and official merch."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head><body><main>
-<section class="ct-top">
-<div class="ct-text">
-<p class="kicker">Contact</p>
-<h1>Let's talk.</h1>
-<p class="ct-lead">Sponsorship, media, appearances, or just to say hi. I'd love to hear from you.</p>
-<div class="ct-email">
-<a id="ct-addr" href="mailto:loniunser@gmail.com">loniunser@gmail.com</a>
-<button type="button" class="copy" id="copy-email">Copy</button>
-</div>
-<p class="msg" id="copy-msg" role="status"></p>
-<ul class="ct-links" id="ct-links"></ul>
-</div>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact — Loni Unser</title><meta name="description" content="Loni Unser: sports car racing driver. Schedule, story, partners and official merch."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head><body class="on-photo"><main>
+<section class="hero ct2-hero">
 <img class="photo" src="assets/contact.jpg" alt="Loni smiling in the pits with her earpiece in">
+<h1>Let's talk.</h1>
 </section>
 
-<section class="ct-form-band">
-<div class="ct-form-head">
-<h2>Send a message</h2>
-<p>Partnering with a brand, booking an appearance or writing for a publication? Tell me a little about it and I'll get back to you.</p>
-</div>
-<form class="ct-form" id="contact-form" novalidate>
-<div class="f"><label for="cf-name">Name</label><input id="cf-name" name="name" autocomplete="name" required></div>
-<div class="f"><label for="cf-email">Your email</label><input id="cf-email" name="email" type="email" autocomplete="email" required></div>
-<div class="f full"><label for="cf-topic">What's this about?</label>
-<select id="cf-topic" name="topic"><option>Sponsorship or partnership</option><option>Media or press</option><option>Appearance or event</option><option>Just saying hi</option><option>Something else</option></select></div>
-<div class="f full"><label for="cf-msg">Message</label><textarea id="cf-msg" name="message" rows="6" required></textarea></div>
-<div class="full"><button class="cta" type="submit">Write my email</button>
-<p class="msg" id="cf-status" role="status"></p></div>
-</form>
+<section class="ct2-email">
+<p class="kicker">Email</p>
+<a id="ct-addr" class="ct2-addr" href="mailto:loniunser@gmail.com">loniunser@gmail.com</a>
+<div class="ct2-copy"><button type="button" class="copy" id="copy-email">Copy address</button><span class="msg" id="copy-msg" role="status"></span></div>
+</section>
+
+<section class="ct2-rows">
+<p class="kicker">What's it about?</p>
+<ul>
+<li><a href="mailto:loniunser@gmail.com?subject=Sponsorship%20or%20partnership"><span class="r-t">Sponsorship &amp; partnerships</span><span class="r-go">Email →</span></a></li>
+<li><a href="mailto:loniunser@gmail.com?subject=Media%20or%20press"><span class="r-t">Media &amp; press</span><span class="r-go">Email →</span></a></li>
+<li><a href="mailto:loniunser@gmail.com?subject=Appearance%20or%20event"><span class="r-t">Appearances &amp; events</span><span class="r-go">Email →</span></a></li>
+<li><a href="mailto:loniunser@gmail.com?subject=Hi%20Loni"><span class="r-t">Just saying hi</span><span class="r-go">Email →</span></a></li>
+</ul>
+</section>
+
+<section class="ct2-social">
+<p class="kicker">Follow along</p>
+<ul id="ct-links"></ul>
 </section>
 </main>
 <script src="layout.js"></script>
@@ -36,16 +31,7 @@ var links=document.getElementById("ct-links");
 Object.keys(SITE.social).forEach(function(n){var li=document.createElement("li");var a=document.createElement("a");a.href=SITE.social[n];a.target="_blank";a.rel="noopener";a.textContent=n;li.appendChild(a);links.appendChild(li)});
 document.getElementById("copy-email").addEventListener("click",function(){
  var m=document.getElementById("copy-msg"),addr=SITE.email;
- var done=function(){m.textContent="Copied "+addr}, fail=function(){var r=document.createRange();r.selectNodeContents(document.getElementById("ct-addr"));var s=getSelection();s.removeAllRanges();s.addRange(r);m.textContent="Press and hold to copy the selected address."};
+ var done=function(){m.textContent="Copied."}, fail=function(){var r=document.createRange();r.selectNodeContents(document.getElementById("ct-addr"));var s=getSelection();s.removeAllRanges();s.addRange(r);m.textContent="Selected. Press and hold to copy."};
  try{navigator.clipboard.writeText(addr).then(done,fail)}catch(e){fail()}
-});
-document.getElementById("contact-form").addEventListener("submit",function(e){
- e.preventDefault();
- var f=e.target,st=document.getElementById("cf-status");
- if(!f.name.value.trim()||!f.email.value.trim()||!f.message.value.trim()){st.textContent="Please fill in your name, email and message.";return}
- var body=f.message.value.trim()+"\n\n"+f.name.value.trim()+"\n"+f.email.value.trim();
- var url="mailto:"+SITE.email+"?subject="+encodeURIComponent(f.topic.value+" - "+f.name.value.trim())+"&body="+encodeURIComponent(body);
- st.textContent="Your email app should open with this message ready to send. If nothing opens, copy the address above and email me directly.";
- try{window.location.href=url}catch(err){}
 });
 </script></body></html>
