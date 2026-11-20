@@ -163,3 +163,9 @@ input,textarea{font:inherit;padding:1rem;border:2px solid #000;background:#fff;w
 .win-text p:not(.kicker){max-width:26em;font-size:1.2rem;color:#d4d4d4}
 .win-text .cta{align-self:flex-start;margin-top:1.4rem}
 @media(max-width:820px){.win{grid-template-columns:1fr;min-height:0}.win .photo{min-height:0;height:auto;aspect-ratio:3/4}.win-text{padding:50px 5vw 70px}}
+/* 2027 season page */
+.season{max-width:none;padding-bottom:50px}
+.season .facts{grid-template-columns:repeat(3,minmax(0,1fr));max-width:900px}
+.season-photo{padding:0 4vw 100px}
+.season-photo .photo{display:block;width:100%;aspect-ratio:2/1;object-position:50% 38%}
+@media(max-width:820px){.season .facts{gap:1rem}.season .facts b{font-size:1.6rem}.season-photo{padding-bottom:70px}.season-photo .photo{aspect-ratio:3/2}}
