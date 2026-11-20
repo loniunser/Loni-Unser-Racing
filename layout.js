@@ -10,10 +10,11 @@ const SITE = {
   // Put logo files in assets/sponsors/ and list them here.
   sponsors: [
     { name: "Speedway Motors", file: "speedway-motors.png" },
-    { name: "Shift Up Now", file: "shift-up-now.png" },
+    { name: "Mobil 1", file: "mobil-1.png" },
     { name: "Acumatica", file: "acumatica.png" },
     { name: "PenFed Credit Union", file: "penfed.png" },
     { name: "Kellymoss", file: "kellymoss.png" },
+    { name: "Shift Up Now", file: "shift-up-now.png" },
   ],
 };
 const PAGES = [["Home","index.html"],["2027","2027.html"],["About","about.html"],["Contact","contact.html"],["Schedule","schedule.html"],["Shop","shop.html"],["Cart","cart.html"]];
