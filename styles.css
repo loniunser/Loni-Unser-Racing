@@ -395,3 +395,4 @@ input,textarea{font:inherit;padding:1rem;border:2px solid #000;background:#fff;w
  .sp2-cards{grid-template-columns:1fr}
  .sp2-cards a{min-height:200px}
 }
+.site-header nav a{white-space:nowrap}
